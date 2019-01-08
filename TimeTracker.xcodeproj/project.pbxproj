@@ -54,14 +54,38 @@
 		F6A96F4221C921BE00DC0C66 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				F6A96F4321C921BE00DC0C66 /* AppDelegate.swift */,
-				F6A96F4521C921BE00DC0C66 /* ViewController.swift */,
-				F6A96F4721C921BE00DC0C66 /* Main.storyboard */,
-				F6A96F4A21C921BE00DC0C66 /* Assets.xcassets */,
-				F6A96F4C21C921BE00DC0C66 /* LaunchScreen.storyboard */,
-				F6A96F4F21C921BE00DC0C66 /* Info.plist */,
+				F6A96F5721C921F500DC0C66 /* Views */,
+				F6A96F5621C921E500DC0C66 /* Resources */,
+				F6A96F5521C921D300DC0C66 /* Supporting-Files */,
 			);
 			path = TimeTracker;
+			sourceTree = "<group>";
+		};
+		F6A96F5521C921D300DC0C66 /* Supporting-Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6A96F4F21C921BE00DC0C66 /* Info.plist */,
+				F6A96F4321C921BE00DC0C66 /* AppDelegate.swift */,
+			);
+			path = "Supporting-Files";
+			sourceTree = "<group>";
+		};
+		F6A96F5621C921E500DC0C66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6A96F4A21C921BE00DC0C66 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6A96F5721C921F500DC0C66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6A96F4521C921BE00DC0C66 /* ViewController.swift */,
+				F6A96F4721C921BE00DC0C66 /* Main.storyboard */,
+				F6A96F4C21C921BE00DC0C66 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TimeTracker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TimeTracker/Supporting-Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lewisvalaitis.TimeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TimeTracker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TimeTracker/Supporting-Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lewisvalaitis.TimeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
