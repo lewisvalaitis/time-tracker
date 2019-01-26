@@ -8,9 +8,4 @@
 
 import UIKit
 
-internal final class ViewController: UIViewController { }
-internal extension ViewController {
-    @IBAction func startTimer() {
-        print("Tapped.")
-    }
-}
+internal final class MenuViewController: UIViewController { }

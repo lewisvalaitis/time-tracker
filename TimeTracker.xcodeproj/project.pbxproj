@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F6A96F4421C921BE00DC0C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A96F4321C921BE00DC0C66 /* AppDelegate.swift */; };
-		F6A96F4621C921BE00DC0C66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A96F4521C921BE00DC0C66 /* ViewController.swift */; };
+		F6A96F4621C921BE00DC0C66 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A96F4521C921BE00DC0C66 /* MenuViewController.swift */; };
 		F6A96F4921C921BE00DC0C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A96F4721C921BE00DC0C66 /* Main.storyboard */; };
 		F6A96F4B21C921BE00DC0C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A96F4A21C921BE00DC0C66 /* Assets.xcassets */; };
 		F6A96F4E21C921BE00DC0C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A96F4C21C921BE00DC0C66 /* LaunchScreen.storyboard */; };
+		F6E7ACB921F394E500AB8D28 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E7ACB821F394E500AB8D28 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F6A96F4021C921BE00DC0C66 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A96F4321C921BE00DC0C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6A96F4521C921BE00DC0C66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6A96F4521C921BE00DC0C66 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F6A96F4821C921BE00DC0C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6A96F4A21C921BE00DC0C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6A96F4D21C921BE00DC0C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6A96F4F21C921BE00DC0C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E7ACB821F394E500AB8D28 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,8 @@
 		F6A96F5721C921F500DC0C66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F6A96F4521C921BE00DC0C66 /* ViewController.swift */,
+				F6A96F4521C921BE00DC0C66 /* MenuViewController.swift */,
+				F6E7ACB821F394E500AB8D28 /* TimerViewController.swift */,
 				F6A96F4721C921BE00DC0C66 /* Main.storyboard */,
 				F6A96F4C21C921BE00DC0C66 /* LaunchScreen.storyboard */,
 			);
@@ -115,11 +118,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Lewis Valaitis";
 				TargetAttributes = {
 					F6A96F3F21C921BE00DC0C66 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -160,7 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A96F4621C921BE00DC0C66 /* ViewController.swift in Sources */,
+				F6A96F4621C921BE00DC0C66 /* MenuViewController.swift in Sources */,
+				F6E7ACB921F394E500AB8D28 /* TimerViewController.swift in Sources */,
 				F6A96F4421C921BE00DC0C66 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +206,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -208,6 +214,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -258,6 +265,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -265,6 +273,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -303,7 +312,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lewisvalaitis.TimeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -317,7 +326,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lewisvalaitis.TimeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
