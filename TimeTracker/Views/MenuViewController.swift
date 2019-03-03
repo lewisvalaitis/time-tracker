@@ -7,5 +7,10 @@
 //
 
 import UIKit
+import RealmSwift
 
-internal final class MenuViewController: UIViewController { }
+/**
+ The home screen from which the user can start a task, look at previous tasks, and schedule a task.
+ */
+internal final class MenuViewController: UIViewController {
+}
