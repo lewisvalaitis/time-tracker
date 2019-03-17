@@ -21,12 +21,31 @@ final class Task: Object {
     /// The number of seconds the task lasted.
     @objc dynamic var duration: Int = 0
     /// The times at which the user paused the task.
-    let pauseTimes = List<Date>()
+    let pauseTimes = List<Pause>()
+    /// The properties to be ignored by the database.
+    override static func ignoredProperties() -> [String] {
+        return [
+            "endTime"
+        ]
+    }
 }
+// MARK: Initializer
 extension Task {
-    // MARK: Initializer
     convenience init(name: String) {
         self.init()
         self.name = name
     }
+}
+// MARK: Computed Properties
+extension Task {
+    var endTime: Date {
+        let totalPauseTime = pauseTimes.reduce(0) { current, pause in current + pause.duration }
+        let totalDuration = TimeInterval(duration + totalPauseTime)
+        return Date(timeInterval: totalDuration, since: startTime)
+    }
+}
+
+final class Pause: Object {
+    @objc dynamic var start = Date()
+    @objc dynamic var duration: Int = 0
 }

@@ -84,6 +84,9 @@ private extension TimerViewController {
     }
     
     @IBAction func stopTimer(_ sender: UIButton) {
+        if case .editingName = state {
+            _ = nameTextField.delegate?.textFieldShouldReturn?(nameTextField)
+        }
         let realm = try! Realm()
         try! realm.write {
             if let taskName = nameLabel.text, !taskName.isEmpty {
