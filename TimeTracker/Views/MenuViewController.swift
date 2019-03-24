@@ -14,3 +14,13 @@ import RealmSwift
  */
 internal final class MenuViewController: UIViewController {
 }
+/**
+ This is create to correct an issue with UIImageView as stated in the follow radar:
+ http://openradar.appspot.com/18448072
+ */
+extension UIImageView {
+    override open func awakeFromNib() {
+        super.awakeFromNib()
+        tintColorDidChange()
+    }
+}

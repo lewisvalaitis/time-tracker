@@ -24,7 +24,6 @@ extension TaskListViewController {
         super.viewDidLoad()
         let realm = try! Realm()
         tasks = Array(realm.objects(Task.self))
-        print(tasks)
         tableView.reloadData()
     }
 }

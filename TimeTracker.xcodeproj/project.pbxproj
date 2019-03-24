@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E7EE0A4D4904808EBF76ECC6 /* Pods_TimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F35DF715F63A41D7338B1BD /* Pods_TimeTracker.framework */; };
 		F61F088F222560BB00BF4E76 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61F088E222560BB00BF4E76 /* Task.swift */; };
-		F6705113222E8884002BCB43 /* ScheduleTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6705112222E8884002BCB43 /* ScheduleTaskView.swift */; };
+		F6705113222E8884002BCB43 /* ScheduleTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6705112222E8884002BCB43 /* ScheduleTaskViewController.swift */; };
 		F6A96F4421C921BE00DC0C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A96F4321C921BE00DC0C66 /* AppDelegate.swift */; };
 		F6A96F4621C921BE00DC0C66 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A96F4521C921BE00DC0C66 /* MenuViewController.swift */; };
 		F6A96F4921C921BE00DC0C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A96F4721C921BE00DC0C66 /* Main.storyboard */; };
@@ -24,7 +24,7 @@
 		6F35DF715F63A41D7338B1BD /* Pods_TimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F394A65AC16FE00BCB0664C1 /* Pods-TimeTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTracker.debug.xcconfig"; path = "Target Support Files/Pods-TimeTracker/Pods-TimeTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		F61F088E222560BB00BF4E76 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		F6705112222E8884002BCB43 /* ScheduleTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTaskView.swift; sourceTree = "<group>"; };
+		F6705112222E8884002BCB43 /* ScheduleTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTaskViewController.swift; sourceTree = "<group>"; };
 		F6A96F4021C921BE00DC0C66 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A96F4321C921BE00DC0C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6A96F4521C921BE00DC0C66 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 			children = (
 				F6A96F4521C921BE00DC0C66 /* MenuViewController.swift */,
 				F6E7ACB821F394E500AB8D28 /* TimerViewController.swift */,
-				F6705112222E8884002BCB43 /* ScheduleTaskView.swift */,
+				F6705112222E8884002BCB43 /* ScheduleTaskViewController.swift */,
 				F6A96F4721C921BE00DC0C66 /* Main.storyboard */,
 				F6A96F4C21C921BE00DC0C66 /* LaunchScreen.storyboard */,
 				F6D3723E222C4DA100F7E42D /* TaskListViewController.swift */,
@@ -260,7 +260,7 @@
 				F6A96F4621C921BE00DC0C66 /* MenuViewController.swift in Sources */,
 				F6E7ACB921F394E500AB8D28 /* TimerViewController.swift in Sources */,
 				F6A96F4421C921BE00DC0C66 /* AppDelegate.swift in Sources */,
-				F6705113222E8884002BCB43 /* ScheduleTaskView.swift in Sources */,
+				F6705113222E8884002BCB43 /* ScheduleTaskViewController.swift in Sources */,
 				F6D3723F222C4DA100F7E42D /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

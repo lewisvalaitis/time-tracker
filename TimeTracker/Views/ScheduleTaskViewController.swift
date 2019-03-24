@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-internal final class ScheduleTaskController: UIViewController {
+internal final class ScheduleTaskViewController: UIViewController {
     
     @IBOutlet weak var taskLabel: UITextField!
     @IBOutlet weak var inputDate: UITextField!
@@ -22,14 +22,14 @@ internal final class ScheduleTaskController: UIViewController {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge ], completionHandler: {didAllow, error in})
         
         datePicker.datePickerMode = .date
-        datePicker.addTarget(self, action: #selector(ScheduleTaskController.dateChanged(datePicker:)), for: .valueChanged)
+        datePicker.addTarget(self, action: #selector(ScheduleTaskViewController.dateChanged(datePicker:)), for: .valueChanged)
         inputDate.inputView = datePicker
         
         timePicker.datePickerMode = .time
-        timePicker.addTarget(self, action: #selector(ScheduleTaskController.timeChanged(timePicker:)), for: .valueChanged)
+        timePicker.addTarget(self, action: #selector(ScheduleTaskViewController.timeChanged(timePicker:)), for: .valueChanged)
         inputTime.inputView = timePicker
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ScheduleTaskController.viewTapped(gestureRecognizer:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ScheduleTaskViewController.viewTapped(gestureRecognizer:)))
         
         view.addGestureRecognizer(tapGesture)
         
@@ -49,6 +49,9 @@ internal final class ScheduleTaskController: UIViewController {
         taskNotificaton.title = "Reminder"
         taskNotificaton.badge = 1
         let trigger = UNCalendarNotificationTrigger(dateMatching: taskDateComponents, repeats: false)
+        let request = UNNotificationRequest(identifier: "Time to complete task", content: taskNotificaton, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
         navigationController?.popViewController(animated: true)
     }
     

@@ -51,7 +51,7 @@ extension TimerViewController: UITextFieldDelegate {
         } else {
             state = .unnamed
         }
-        resignFirstResponder()
+        textField.resignFirstResponder()
         return false
     }
 }
@@ -84,9 +84,11 @@ private extension TimerViewController {
     }
     
     @IBAction func stopTimer(_ sender: UIButton) {
+        timer?.invalidate()
         if case .editingName = state {
             _ = nameTextField.delegate?.textFieldShouldReturn?(nameTextField)
         }
+        var savedTaskName = ""
         let realm = try! Realm()
         try! realm.write {
             if let taskName = nameLabel.text, !taskName.isEmpty {
@@ -94,12 +96,18 @@ private extension TimerViewController {
             }
             task.duration = secondsElapsed
             realm.add(task)
+            savedTaskName = task.name
         }
         
         //  allows me, as the developer, to open the database while I'm working
         print(Realm.Configuration.defaultConfiguration.fileURL ?? nil!)
         
-        navigationController?.popViewController(animated: true)
+        let alert = UIAlertController(title: "'\(savedTaskName)' Created", message: "Your task has been created.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Thanks!", style: .default) { [unowned self] _ in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
 
